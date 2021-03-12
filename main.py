@@ -1,9 +1,9 @@
 #-*- coding:utf-8 -*-
 
-import graphene
+from graphene import ObjectType, String, Schema
 from fastapi import FastAPI
 from starlette.graphql import GraphQLApp
-from graphene import ObjectType, String, Schema
+
 
 class Query(ObjectType):
     hello = String(name=String(default_value="stranger"))
